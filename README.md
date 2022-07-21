@@ -1,16 +1,8 @@
 #Introduction 
-This project is to give customers a set of bot scenarios to build with the Azure Bot Service
+This project is a chatbot created as a implementation for Case Study given during our Explore Microsft Internship 
+Customers will be able to interact with the bot using a wide set of bot scenarios. 
+Built with the Azure Bot Service, and Bot Framework SDK
 
-#Getting Started
-Install each of the Azure Bot Service scenarios
-
-1.	Installation process
-
-    We're going to use the latest Visual Studio 2017 release bits.
-
-2.	Software dependencies
-3.	Latest releases
-4.	API references
 
 
 #References
