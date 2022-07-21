@@ -12,12 +12,24 @@
       "name": "None"
     },
     {
-      "name": "Reserve.Cabana"
+      "name": "Buy.Bike"
+    },
+    {
+      "name": "Buy.BikeParts"
+    },
+    {
+      "name": "Call.Person"
     }
   ],
   "entities": [
     {
-      "name": "Cabana"
+      "name": "Bike"
+    },
+    {
+      "name": "BikeParts"
+    },
+    {
+      "name": "Person"
     }
   ],
   "composites": [],
@@ -47,99 +59,99 @@
       "entities": []
     },
     {
-      "text": "do you have any cabanas",
-      "intent": "Reserve.Cabana",
+      "text": "do you have any bikes",
+      "intent": "Buy.Bikes",
       "entities": [
         {
-          "entity": "Cabana",
+          "entity": "Bike",
           "startPos": 16,
           "endPos": 22
         }
       ]
     },
     {
-      "text": "cabana",
-      "intent": "Reserve.Cabana",
+      "text": "Bike",
+      "intent": "Buy.Bikes",
       "entities": [
         {
-          "entity": "Cabana",
+          "entity": "Bike",
           "startPos": 0,
           "endPos": 5
         }
       ]
     },
     {
-      "text": "i'd like to reserve a cabana",
-      "intent": "Reserve.Cabana",
+      "text": "i'd like to buy Bike Pars",
+      "intent": "Buy.BikesParts",
       "entities": [
         {
-          "entity": "Cabana",
+          "entity": "BikeParts",
           "startPos": 22,
           "endPos": 27
         }
       ]
     },
     {
-      "text": "i'd like to reserve a cabana.",
-      "intent": "Reserve.Cabana",
+      "text": "i'd like to buy a Bike.",
+      "intent": "Buy.Bikes",
       "entities": [
         {
-          "entity": "Cabana",
+          "entity": "Bike",
           "startPos": 22,
           "endPos": 27
         }
       ]
     },
     {
-      "text": "reserve cabana",
-      "intent": "Reserve.Cabana",
+      "text": "buy Bike",
+      "intent": "Buy.Bikes",
       "entities": [
         {
-          "entity": "Cabana",
+          "entity": "Bike",
           "startPos": 8,
           "endPos": 13
         }
       ]
     },
     {
-      "text": "book a cabana",
-      "intent": "Reserve.Cabana",
+      "text": "buy a Bike",
+      "intent": "Buy.Bikes",
       "entities": [
         {
-          "entity": "Cabana",
+          "entity": "Bike",
           "startPos": 7,
           "endPos": 12
         }
       ]
     },
     {
-      "text": "i'd like to rent a cabana",
-      "intent": "Reserve.Cabana",
+      "text": "i'd like to rent a Bike",
+      "intent": "Buy.Bikes",
       "entities": [
         {
-          "entity": "Cabana",
+          "entity": "Bike",
           "startPos": 19,
           "endPos": 24
         }
       ]
     },
     {
-      "text": "i would like to reserve a cabana",
-      "intent": "Reserve.Cabana",
+      "text": "i would like to buy a Bike",
+      "intent": "Buy.Bikes",
       "entities": [
         {
-          "entity": "Cabana",
+          "entity": "Bike",
           "startPos": 26,
           "endPos": 31
         }
       ]
     },
     {
-      "text": "i'd like to book a cabana.",
-      "intent": "Reserve.Cabana",
+      "text": "i'd like to book a Bike.",
+      "intent": "Buy.Bikes",
       "entities": [
         {
-          "entity": "Cabana",
+          "entity": "Bike",
           "startPos": 19,
           "endPos": 24
         }
