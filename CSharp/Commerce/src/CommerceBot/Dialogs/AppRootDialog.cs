@@ -14,33 +14,33 @@ namespace CommerceBot.Dialogs
     // Subscription Key is one of the two keys from your Cognitive Services App.
     // Find at: https://portal.azure.com in the Resource Group where you've created
     // your Cognitive Services resource on the Keys blade.
-    [LuisModel("db2fd8cac9b5406088e22c7e7a088fc6", "d54e140c122e471ea77dd3b85b492fdd")]
+    [LuisModel("3463b76d-f327-4ca9-86a0-18cdcf9c24b0", "db2fd8cac9b5406088e22c7e7a088fc6")]
     [Serializable]
     public class AppRootDialog : LuisDialog<object>
     {
-        private const string EntityCabana = "Cabana";
+        private const string EntityBike = "Bike";
 
-        [LuisIntent("Reserve.Cabana")]
-        public async Task ReserveCabana(IDialogContext context,
+        [LuisIntent("Bike.Menu")]
+        public async Task BikeMenu(IDialogContext context,
                                  IAwaitable<IMessageActivity> activity,
                                  LuisResult result)
         {
-            Trace.TraceInformation("AppRootDialog::ReserveCabana");
+            Trace.TraceInformation("AppRootDialog::BikeMenu");
 
             var message = await activity;
             IAwaitable<object> awaitableMessage = await activity as IAwaitable<object>;
 
-            if (!result.TryFindEntity(EntityCabana, out EntityRecommendation cabanaRec)
-                || cabanaRec.Score <= .5)
+            if (!result.TryFindEntity(EntityBike, out EntityRecommendation bikeRec)
+                || bikeRec.Score <= .5)
             {
-                Trace.TraceWarning("Low Confidence in ReserveCabana.");
+                Trace.TraceWarning("Low Confidence in BikeAddtoCart.");
 
                 await context.PostAsync($"I'm sorry, I don't understand '{message.Text}'.");
                 context.Wait(this.MessageReceived);
                 return;
             }
 
-            await context.PostAsync("I see you want to book a cabana.");
+            await context.PostAsync("I see you want to buy a bike.");
 
             await context.Forward(new AppAuthDialog(),
                 this.ResumeAfterHotelServicesDialog, message, CancellationToken.None);
@@ -56,7 +56,7 @@ namespace CommerceBot.Dialogs
         [LuisIntent("Help")]
         public async Task Help(IDialogContext context, LuisResult result)
         {
-            await context.PostAsync("Hi! Try asking me to 'Book a Cabana'.");
+            await context.PostAsync("Hi! Try asking me 'What bikes do you have?'.");
 
             context.Wait(this.MessageReceived);
         }
