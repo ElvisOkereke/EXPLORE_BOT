@@ -1,161 +1,488 @@
 {
-  "luis_schema_version": "2.1.0",
-  "versionId": "0.1",
-  "name": "CommerceBot",
-  "desc": "CommerceBot LUIS App Definition",
-  "culture": "en-us",
+  "luis_schema_version": "7.0.0",
   "intents": [
     {
-      "name": "Help"
+      "name": "Bike.AddtoCart",
+      "features": [
+        {
+          "modelName": "bike",
+          "isRequired": false
+        }
+      ]
     },
     {
-      "name": "None"
+      "name": "Bike.Menu",
+      "features": []
     },
     {
-      "name": "Buy.Bike"
+      "name": "Bike.PartsGen",
+      "features": []
     },
     {
-      "name": "Buy.BikeParts"
+      "name": "Bike.UseCase",
+      "features": []
     },
     {
-      "name": "Call.Person"
+      "name": "BikePart.Crankset",
+      "features": []
+    },
+    {
+      "name": "BikePart.Frames",
+      "features": []
+    },
+    {
+      "name": "BikeParts.Chains",
+      "features": []
+    },
+    {
+      "name": "BikeParts.Tires",
+      "features": []
+    },
+    {
+      "name": "BikeParts.Wheels",
+      "features": []
+    },
+    {
+      "name": "Budget",
+      "features": []
+    },
+    {
+      "name": "Cart.Clear",
+      "features": []
+    },
+    {
+      "name": "Cart.Show",
+      "features": []
+    },
+    {
+      "name": "Help",
+      "features": []
+    },
+    {
+      "name": "Human",
+      "features": []
+    },
+    {
+      "name": "None",
+      "features": []
+    },
+    {
+      "name": "Return",
+      "features": []
     }
   ],
   "entities": [
     {
-      "name": "Bike"
-    },
-    {
-      "name": "BikeParts"
-    },
-    {
-      "name": "Person"
+      "name": "bike",
+      "children": [],
+      "roles": [],
+      "features": [
+        {
+          "featureName": "bikeTest",
+          "isRequired": false
+        }
+      ]
     }
   ],
+  "hierarchicals": [],
   "composites": [],
   "closedLists": [],
-  "bing_entities": [
-    "datetimeV2",
-    "money",
-    "number"
+  "prebuiltEntities": [
+    {
+      "name": "email",
+      "roles": []
+    },
+    {
+      "name": "ordinal",
+      "roles": []
+    }
   ],
-  "actions": [],
-  "model_features": [],
-  "regex_features": [],
   "utterances": [
     {
-      "text": "hello",
+      "text": "49cm",
+      "intent": "BikePart.Frames",
+      "entities": []
+    },
+    {
+      "text": "58cm",
+      "intent": "BikePart.Frames",
+      "entities": []
+    },
+    {
+      "text": "annoying",
+      "intent": "Human",
+      "entities": []
+    },
+    {
+      "text": "bicycle",
+      "intent": "Bike.Menu",
+      "entities": []
+    },
+    {
+      "text": "bicycle chain",
+      "intent": "BikeParts.Chains",
+      "entities": []
+    },
+    {
+      "text": "bicycle wheel",
+      "intent": "BikeParts.Wheels",
+      "entities": []
+    },
+    {
+      "text": "bicycle wheels",
+      "intent": "BikeParts.Wheels",
+      "entities": []
+    },
+    {
+      "text": "bike",
+      "intent": "Bike.Menu",
+      "entities": []
+    },
+    {
+      "text": "bike chain",
+      "intent": "BikeParts.Chains",
+      "entities": []
+    },
+    {
+      "text": "bike parts",
+      "intent": "Bike.PartsGen",
+      "entities": []
+    },
+    {
+      "text": "bike wheels",
+      "intent": "BikeParts.Wheels",
+      "entities": []
+    },
+    {
+      "text": "budget",
+      "intent": "Budget",
+      "entities": []
+    },
+    {
+      "text": "budgeting",
+      "intent": "Budget",
+      "entities": []
+    },
+    {
+      "text": "can i please talk to a real person",
+      "intent": "Human",
+      "entities": []
+    },
+    {
+      "text": "chain",
+      "intent": "BikeParts.Chains",
+      "entities": []
+    },
+    {
+      "text": "chains",
+      "intent": "BikeParts.Chains",
+      "entities": []
+    },
+    {
+      "text": "chainset",
+      "intent": "BikePart.Crankset",
+      "entities": []
+    },
+    {
+      "text": "chainsets",
+      "intent": "BikePart.Crankset",
+      "entities": []
+    },
+    {
+      "text": "clear cart",
+      "intent": "Cart.Clear",
+      "entities": []
+    },
+    {
+      "text": "complete bike",
+      "intent": "Bike.Menu",
+      "entities": []
+    },
+    {
+      "text": "crankset",
+      "intent": "BikePart.Crankset",
+      "entities": []
+    },
+    {
+      "text": "cranksets",
+      "intent": "BikePart.Crankset",
+      "entities": []
+    },
+    {
+      "text": "custom bike",
+      "intent": "Bike.PartsGen",
+      "entities": []
+    },
+    {
+      "text": "customize",
+      "intent": "Bike.PartsGen",
+      "entities": []
+    },
+    {
+      "text": "do you sell parts?",
+      "intent": "Bike.PartsGen",
+      "entities": []
+    },
+    {
+      "text": "fixed gear",
+      "intent": "Bike.UseCase",
+      "entities": []
+    },
+    {
+      "text": "fixie",
+      "intent": "Bike.UseCase",
+      "entities": []
+    },
+    {
+      "text": "flat tire",
+      "intent": "BikeParts.Tires",
+      "entities": []
+    },
+    {
+      "text": "frame",
+      "intent": "BikePart.Frames",
+      "entities": []
+    },
+    {
+      "text": "frames",
+      "intent": "BikePart.Frames",
+      "entities": []
+    },
+    {
+      "text": "hate bots",
+      "intent": "Human",
+      "entities": []
+    },
+    {
+      "text": "how do i use this bot?",
       "intent": "Help",
       "entities": []
     },
     {
-      "text": "help",
+      "text": "i am angry",
+      "intent": "Human",
+      "entities": []
+    },
+    {
+      "text": "i am looking for a bike",
+      "intent": "Bike.Menu",
+      "entities": []
+    },
+    {
+      "text": "i am on a bit of a budget",
+      "intent": "Budget",
+      "entities": []
+    },
+    {
+      "text": "i can only spend so much",
+      "intent": "Budget",
+      "entities": []
+    },
+    {
+      "text": "i do not want these anymore",
+      "intent": "Cart.Clear",
+      "entities": []
+    },
+    {
+      "text": "i like that bike on the left",
+      "intent": "Bike.AddtoCart",
+      "entities": []
+    },
+    {
+      "text": "i like the bike in the front",
+      "intent": "Bike.AddtoCart",
+      "entities": []
+    },
+    {
+      "text": "i need a bike",
+      "intent": "Bike.Menu",
+      "entities": []
+    },
+    {
+      "text": "i need a frame",
+      "intent": "BikePart.Frames",
+      "entities": []
+    },
+    {
+      "text": "i need tires",
+      "intent": "BikeParts.Tires",
+      "entities": []
+    },
+    {
+      "text": "i want to buy that bike",
+      "intent": "Bike.AddtoCart",
+      "entities": []
+    },
+    {
+      "text": "i would like a chainset",
+      "intent": "BikePart.Crankset",
+      "entities": []
+    },
+    {
+      "text": "i would like bike number 5",
+      "intent": "Bike.AddtoCart",
+      "entities": []
+    },
+    {
+      "text": "i would like to buy a bike",
+      "intent": "Bike.Menu",
+      "entities": []
+    },
+    {
+      "text": "i would like to buy a crankset",
+      "intent": "BikePart.Crankset",
+      "entities": []
+    },
+    {
+      "text": "mountain bike",
+      "intent": "Bike.UseCase",
+      "entities": []
+    },
+    {
+      "text": "mtb",
+      "intent": "Bike.UseCase",
+      "entities": []
+    },
+    {
+      "text": "prebuilt",
+      "intent": "Bike.Menu",
+      "entities": []
+    },
+    {
+      "text": "return",
+      "intent": "Return",
+      "entities": []
+    },
+    {
+      "text": "return defective",
+      "intent": "Return",
+      "entities": []
+    },
+    {
+      "text": "road bike",
+      "intent": "Bike.UseCase",
+      "entities": []
+    },
+    {
+      "text": "shit",
+      "intent": "Human",
+      "entities": []
+    },
+    {
+      "text": "show cart",
+      "intent": "Cart.Show",
+      "entities": []
+    },
+    {
+      "text": "stupid",
+      "intent": "Human",
+      "entities": []
+    },
+    {
+      "text": "this is getting on my nerves",
+      "intent": "Human",
+      "entities": []
+    },
+    {
+      "text": "tire",
+      "intent": "BikeParts.Tires",
+      "entities": []
+    },
+    {
+      "text": "tired of this",
+      "intent": "Human",
+      "entities": []
+    },
+    {
+      "text": "too expensive",
+      "intent": "Budget",
+      "entities": []
+    },
+    {
+      "text": "track",
+      "intent": "Bike.UseCase",
+      "entities": []
+    },
+    {
+      "text": "track frame",
+      "intent": "BikePart.Frames",
+      "entities": []
+    },
+    {
+      "text": "tubeless",
+      "intent": "BikeParts.Tires",
+      "entities": []
+    },
+    {
+      "text": "what bikes do you have?",
+      "intent": "Bike.Menu",
+      "entities": []
+    },
+    {
+      "text": "what can you do",
       "intent": "Help",
       "entities": []
     },
     {
-      "text": "what can you do?",
-      "intent": "Help",
+      "text": "what i have",
+      "intent": "Cart.Show",
       "entities": []
     },
     {
-      "text": "do you have any bikes",
-      "intent": "Buy.Bikes",
-      "entities": [
-        {
-          "entity": "Bike",
-          "startPos": 16,
-          "endPos": 22
-        }
-      ]
+      "text": "what is a crankset?",
+      "intent": "BikePart.Crankset",
+      "entities": []
     },
     {
-      "text": "Bike",
-      "intent": "Buy.Bikes",
-      "entities": [
-        {
-          "entity": "Bike",
-          "startPos": 0,
-          "endPos": 5
-        }
-      ]
+      "text": "what is in cart",
+      "intent": "Cart.Show",
+      "entities": []
     },
     {
-      "text": "i'd like to buy Bike Pars",
-      "intent": "Buy.BikesParts",
-      "entities": [
-        {
-          "entity": "BikeParts",
-          "startPos": 22,
-          "endPos": 27
-        }
-      ]
+      "text": "what tires do you have",
+      "intent": "BikeParts.Tires",
+      "entities": []
     },
     {
-      "text": "i'd like to buy a Bike.",
-      "intent": "Buy.Bikes",
-      "entities": [
-        {
-          "entity": "Bike",
-          "startPos": 22,
-          "endPos": 27
-        }
-      ]
+      "text": "what types of bike do you have?",
+      "intent": "Bike.UseCase",
+      "entities": []
     },
     {
-      "text": "buy Bike",
-      "intent": "Buy.Bikes",
-      "entities": [
-        {
-          "entity": "Bike",
-          "startPos": 8,
-          "endPos": 13
-        }
-      ]
+      "text": "wheel",
+      "intent": "BikeParts.Wheels",
+      "entities": []
     },
     {
-      "text": "buy a Bike",
-      "intent": "Buy.Bikes",
-      "entities": [
-        {
-          "entity": "Bike",
-          "startPos": 7,
-          "endPos": 12
-        }
-      ]
-    },
-    {
-      "text": "i'd like to rent a Bike",
-      "intent": "Buy.Bikes",
-      "entities": [
-        {
-          "entity": "Bike",
-          "startPos": 19,
-          "endPos": 24
-        }
-      ]
-    },
-    {
-      "text": "i would like to buy a Bike",
-      "intent": "Buy.Bikes",
-      "entities": [
-        {
-          "entity": "Bike",
-          "startPos": 26,
-          "endPos": 31
-        }
-      ]
-    },
-    {
-      "text": "i'd like to book a Bike.",
-      "intent": "Buy.Bikes",
-      "entities": [
-        {
-          "entity": "Bike",
-          "startPos": 19,
-          "endPos": 24
-        }
-      ]
+      "text": "wheels",
+      "intent": "BikeParts.Wheels",
+      "entities": []
     }
-  ]
+  ],
+  "versionId": "0.1",
+  "name": "AdventureWorks",
+  "desc": "",
+  "culture": "en-us",
+  "tokenizerVersion": "1.0.0",
+  "patternAnyEntities": [],
+  "regex_entities": [],
+  "phraselists": [
+    {
+      "name": "ResponseTest",
+      "mode": true,
+      "words": "Yes I understand.",
+      "activated": true,
+      "enabledForAllModels": false
+    },
+    {
+      "name": "bikeTest",
+      "mode": true,
+      "words": "bike,bicycle",
+      "activated": true,
+      "enabledForAllModels": false
+    }
+  ],
+  "regex_features": [],
+  "patterns": [],
+  "settings": []
 }
