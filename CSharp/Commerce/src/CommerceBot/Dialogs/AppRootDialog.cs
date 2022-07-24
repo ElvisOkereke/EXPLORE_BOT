@@ -23,20 +23,21 @@ namespace CommerceBot.Dialogs
         private const string EntityBikeFrame = "Frame";
         private const string EntityBikeCrankset = "Crankset";
         private const string EntityBikeWheels = "Wheels";
+        private const string EntityBikeTires = "Tires";
 
         [LuisIntent("BikeParts.Frames")] //incomplete
         public async Task BikeFrames(IDialogContext context,
                                  IAwaitable<IMessageActivity> activity,
                                  LuisResult result)
         {
-            Trace.TraceInformation("AppRootDialog::BikeTires");
+            Trace.TraceInformation("AppRootDialog::BikeFrames");
 
             var message = await activity;
             IAwaitable<object> awaitableMessage = await activity as IAwaitable<object>;
 
-            if (!result.TryFindEntity(EntityBikeFrame, out EntityRecommendation bikeRec) || bikeRec.Score <= .5)
+            if (!result.TryFindEntity(EntityBikeFrame, out EntityRecommendation bikeFrameRec) || bikeFrameRec.Score <= .5)
             {
-                Trace.TraceWarning("Low Confidence in BikeAddtoCart.");
+                Trace.TraceWarning("Low Confidence in BikeFrames.");
 
                 await context.PostAsync($"I'm sorry, I don't understand '{message.Text}'.");
                 context.Wait(this.MessageReceived);
@@ -54,14 +55,14 @@ namespace CommerceBot.Dialogs
                                  IAwaitable<IMessageActivity> activity,
                                  LuisResult result)
         {
-            Trace.TraceInformation("AppRootDialog::BikeTires");
+            Trace.TraceInformation("AppRootDialog::BikeCrank");
 
             var message = await activity;
             IAwaitable<object> awaitableMessage = await activity as IAwaitable<object>;
 
-            if (!result.TryFindEntity(EntityBikeCrankset, out EntityRecommendation bikeRec) || bikeRec.Score <= .5)
+            if (!result.TryFindEntity(EntityBikeCrankset, out EntityRecommendation bikeCrankRec) || bikeCrankRec.Score <= .5)
             {
-                Trace.TraceWarning("Low Confidence in BikeAddtoCart.");
+                Trace.TraceWarning("Low Confidence in BikeCrank.");
 
                 await context.PostAsync($"I'm sorry, I don't understand '{message.Text}'.");
                 context.Wait(this.MessageReceived);
@@ -79,14 +80,14 @@ namespace CommerceBot.Dialogs
                                  IAwaitable<IMessageActivity> activity,
                                  LuisResult result)
         {
-            Trace.TraceInformation("AppRootDialog::BikeTires");
+            Trace.TraceInformation("AppRootDialog::BikeWheels");
 
             var message = await activity;
             IAwaitable<object> awaitableMessage = await activity as IAwaitable<object>;
 
-            if (!result.TryFindEntity(EntityBikeWheels, out EntityRecommendation bikeRec) || bikeRec.Score <= .5)
+            if (!result.TryFindEntity(EntityBikeWheels, out EntityRecommendation bikeWheelRec) || bikeWheelRec.Score <= .5)
             {
-                Trace.TraceWarning("Low Confidence in BikeAddtoCart.");
+                Trace.TraceWarning("Low Confidence in BikeWheels.");
 
                 await context.PostAsync($"I'm sorry, I don't understand '{message.Text}'.");
                 context.Wait(this.MessageReceived);
@@ -104,14 +105,14 @@ namespace CommerceBot.Dialogs
                                  IAwaitable<IMessageActivity> activity,
                                  LuisResult result)
         {
-            Trace.TraceInformation("AppRootDialog::BikeTires");
+            Trace.TraceInformation("AppRootDialog::BikeChains");
 
             var message = await activity;
             IAwaitable<object> awaitableMessage = await activity as IAwaitable<object>;
 
-            if (!result.TryFindEntity(EntityBikeChain, out EntityRecommendation bikeRec) || bikeRec.Score <= .5)
+            if (!result.TryFindEntity(EntityBikeChain, out EntityRecommendation bikeChainRec) || bikeChainRec.Score <= .5)
             {
-                Trace.TraceWarning("Low Confidence in BikeAddtoCart.");
+                Trace.TraceWarning("Low Confidence in BikeChains.");
 
                 await context.PostAsync($"I'm sorry, I don't understand '{message.Text}'.");
                 context.Wait(this.MessageReceived);
@@ -135,10 +136,9 @@ namespace CommerceBot.Dialogs
             var message = await activity;
             IAwaitable<object> awaitableMessage = await activity as IAwaitable<object>;
 
-            if (!result.TryFindEntity(EntityBikeTires, out EntityRecommendation bikeRec)
-                || bikeRec.Score <= .5)
+            if (!result.TryFindEntity(EntityBikeTires, out EntityRecommendation bikeTireRec) || bikeTireRec.Score <= .5)
             {
-                Trace.TraceWarning("Low Confidence in BikeAddtoCart.");
+                Trace.TraceWarning("Low Confidence in BikeTires.");
 
                 await context.PostAsync($"I'm sorry, I don't understand '{message.Text}'.");
                 context.Wait(this.MessageReceived);
@@ -161,10 +161,9 @@ namespace CommerceBot.Dialogs
             var message = await activity;
             IAwaitable<object> awaitableMessage = await activity as IAwaitable<object>;
 
-            if (!result.TryFindEntity(EntityBike, out EntityRecommendation bikeRec)
-                || bikeRec.Score <= .5)
+            if (!result.TryFindEntity(EntityBike, out EntityRecommendation bikeRec) || bikeRec.Score <= .5)
             {
-                Trace.TraceWarning("Low Confidence in BikeAddtoCart.");
+                Trace.TraceWarning("Low Confidence in BikeMenu.");
 
                 await context.PostAsync($"I'm sorry, I don't understand '{message.Text}'.");
                 context.Wait(this.MessageReceived);

@@ -5,7 +5,11 @@
       "name": "Bike.AddtoCart",
       "features": [
         {
-          "modelName": "bike",
+          "featureName": "Color",
+          "isRequired": false
+        },
+        {
+          "modelName": "Bike",
           "isRequired": false
         }
       ]
@@ -16,69 +20,183 @@
     },
     {
       "name": "Bike.PartsGen",
-      "features": []
+      "features": [
+        {
+          "featureName": "Color",
+          "isRequired": false
+        }
+      ]
     },
     {
       "name": "Bike.UseCase",
-      "features": []
+      "features": [
+        {
+          "featureName": "Color",
+          "isRequired": false
+        }
+      ]
     },
     {
       "name": "BikePart.Crankset",
-      "features": []
+      "features": [
+        {
+          "featureName": "Color",
+          "isRequired": false
+        }
+      ]
     },
     {
       "name": "BikePart.Frames",
-      "features": []
+      "features": [
+        {
+          "featureName": "Color",
+          "isRequired": false
+        }
+      ]
     },
     {
       "name": "BikeParts.Chains",
-      "features": []
+      "features": [
+        {
+          "featureName": "Color",
+          "isRequired": false
+        }
+      ]
     },
     {
       "name": "BikeParts.Tires",
-      "features": []
+      "features": [
+        {
+          "featureName": "Color",
+          "isRequired": false
+        }
+      ]
     },
     {
       "name": "BikeParts.Wheels",
-      "features": []
+      "features": [
+        {
+          "featureName": "Color",
+          "isRequired": false
+        }
+      ]
     },
     {
       "name": "Budget",
-      "features": []
+      "features": [
+        {
+          "featureName": "Color",
+          "isRequired": false
+        }
+      ]
     },
     {
       "name": "Cart.Clear",
-      "features": []
+      "features": [
+        {
+          "featureName": "Color",
+          "isRequired": false
+        }
+      ]
     },
     {
       "name": "Cart.Show",
-      "features": []
+      "features": [
+        {
+          "featureName": "Color",
+          "isRequired": false
+        }
+      ]
     },
     {
       "name": "Help",
-      "features": []
+      "features": [
+        {
+          "featureName": "Color",
+          "isRequired": false
+        }
+      ]
     },
     {
       "name": "Human",
-      "features": []
+      "features": [
+        {
+          "featureName": "Color",
+          "isRequired": false
+        }
+      ]
     },
     {
       "name": "None",
-      "features": []
+      "features": [
+        {
+          "featureName": "Color",
+          "isRequired": false
+        }
+      ]
     },
     {
       "name": "Return",
-      "features": []
+      "features": [
+        {
+          "featureName": "Color",
+          "isRequired": false
+        }
+      ]
     }
   ],
   "entities": [
     {
-      "name": "bike",
+      "name": "Bike",
       "children": [],
       "roles": [],
       "features": [
         {
-          "featureName": "bikeTest",
+          "featureName": "Color",
+          "isRequired": false
+        }
+      ]
+    },
+    {
+      "name": "Chain",
+      "children": [],
+      "roles": [],
+      "features": [
+        {
+          "featureName": "Color",
+          "isRequired": false
+        }
+      ]
+    },
+    {
+      "name": "Frame",
+      "children": [],
+      "roles": [],
+      "features": [
+        {
+          "featureName": "Color",
+          "isRequired": false
+        }
+      ]
+    },
+    {
+      "name": "Tire",
+      "children": [],
+      "roles": [],
+      "features": [
+        {
+          "featureName": "Color",
+          "isRequired": false
+        }
+      ]
+    },
+    {
+      "name": "Wheel",
+      "children": [],
+      "roles": [],
+      "features": [
+        {
+          "featureName": "Color",
           "isRequired": false
         }
       ]
@@ -475,9 +593,9 @@
       "enabledForAllModels": false
     },
     {
-      "name": "bikeTest",
+      "name": "Color",
       "mode": true,
-      "words": "bike,bicycle",
+      "words": "red,blue,green,black,silver",
       "activated": true,
       "enabledForAllModels": false
     }
