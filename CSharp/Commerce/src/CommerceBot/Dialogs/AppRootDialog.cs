@@ -34,8 +34,7 @@ namespace CommerceBot.Dialogs
             var message = await activity;
             IAwaitable<object> awaitableMessage = await activity as IAwaitable<object>;
 
-            if (!result.TryFindEntity(EntityBikeFrame, out EntityRecommendation bikeRec)
-                || bikeRec.Score <= .5)
+            if (!result.TryFindEntity(EntityBikeFrame, out EntityRecommendation bikeRec) || bikeRec.Score <= .5)
             {
                 Trace.TraceWarning("Low Confidence in BikeAddtoCart.");
 
@@ -60,8 +59,7 @@ namespace CommerceBot.Dialogs
             var message = await activity;
             IAwaitable<object> awaitableMessage = await activity as IAwaitable<object>;
 
-            if (!result.TryFindEntity(EntityBikeCrankset, out EntityRecommendation bikeRec)
-                || bikeRec.Score <= .5)
+            if (!result.TryFindEntity(EntityBikeCrankset, out EntityRecommendation bikeRec) || bikeRec.Score <= .5)
             {
                 Trace.TraceWarning("Low Confidence in BikeAddtoCart.");
 
@@ -86,8 +84,7 @@ namespace CommerceBot.Dialogs
             var message = await activity;
             IAwaitable<object> awaitableMessage = await activity as IAwaitable<object>;
 
-            if (!result.TryFindEntity(EntityBikeWheels, out EntityRecommendation bikeRec)
-                || bikeRec.Score <= .5)
+            if (!result.TryFindEntity(EntityBikeWheels, out EntityRecommendation bikeRec) || bikeRec.Score <= .5)
             {
                 Trace.TraceWarning("Low Confidence in BikeAddtoCart.");
 
@@ -112,8 +109,7 @@ namespace CommerceBot.Dialogs
             var message = await activity;
             IAwaitable<object> awaitableMessage = await activity as IAwaitable<object>;
 
-            if (!result.TryFindEntity(EntityBikeChain, out EntityRecommendation bikeRec)
-                || bikeRec.Score <= .5)
+            if (!result.TryFindEntity(EntityBikeChain, out EntityRecommendation bikeRec) || bikeRec.Score <= .5)
             {
                 Trace.TraceWarning("Low Confidence in BikeAddtoCart.");
 
