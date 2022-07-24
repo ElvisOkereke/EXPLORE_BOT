@@ -19,6 +19,141 @@ namespace CommerceBot.Dialogs
     public class AppRootDialog : LuisDialog<object>
     {
         private const string EntityBike = "Bike";
+        private const string EntityBikeChain = "Chain";
+        private const string EntityBikeFrame = "Frame";
+        private const string EntityBikeCrankset = "Crankset";
+        private const string EntityBikeWheels = "Wheels";
+
+        [LuisIntent("BikeParts.Frames")] //incomplete
+        public async Task BikeFrames(IDialogContext context,
+                                 IAwaitable<IMessageActivity> activity,
+                                 LuisResult result)
+        {
+            Trace.TraceInformation("AppRootDialog::BikeTires");
+
+            var message = await activity;
+            IAwaitable<object> awaitableMessage = await activity as IAwaitable<object>;
+
+            if (!result.TryFindEntity(EntityBikeFrame, out EntityRecommendation bikeRec)
+                || bikeRec.Score <= .5)
+            {
+                Trace.TraceWarning("Low Confidence in BikeAddtoCart.");
+
+                await context.PostAsync($"I'm sorry, I don't understand '{message.Text}'.");
+                context.Wait(this.MessageReceived);
+                return;
+            }
+
+            await context.PostAsync("I see you want to buy a bike frame.");
+
+            await context.Forward(new AppAuthDialog(),
+                this.ResumeAfterHotelServicesDialog, message, CancellationToken.None);
+        }
+
+        [LuisIntent("BikeParts.Crankset")] //incomplete
+        public async Task BikeCrankset(IDialogContext context,
+                                 IAwaitable<IMessageActivity> activity,
+                                 LuisResult result)
+        {
+            Trace.TraceInformation("AppRootDialog::BikeTires");
+
+            var message = await activity;
+            IAwaitable<object> awaitableMessage = await activity as IAwaitable<object>;
+
+            if (!result.TryFindEntity(EntityBikeCrankset, out EntityRecommendation bikeRec)
+                || bikeRec.Score <= .5)
+            {
+                Trace.TraceWarning("Low Confidence in BikeAddtoCart.");
+
+                await context.PostAsync($"I'm sorry, I don't understand '{message.Text}'.");
+                context.Wait(this.MessageReceived);
+                return;
+            }
+
+            await context.PostAsync("I see you want to buy a bike crankset.");
+
+            await context.Forward(new AppAuthDialog(),
+                this.ResumeAfterHotelServicesDialog, message, CancellationToken.None);
+        }
+
+        [LuisIntent("BikeParts.Wheels")] //incomplete
+        public async Task BikeWheels(IDialogContext context,
+                                 IAwaitable<IMessageActivity> activity,
+                                 LuisResult result)
+        {
+            Trace.TraceInformation("AppRootDialog::BikeTires");
+
+            var message = await activity;
+            IAwaitable<object> awaitableMessage = await activity as IAwaitable<object>;
+
+            if (!result.TryFindEntity(EntityBikeWheels, out EntityRecommendation bikeRec)
+                || bikeRec.Score <= .5)
+            {
+                Trace.TraceWarning("Low Confidence in BikeAddtoCart.");
+
+                await context.PostAsync($"I'm sorry, I don't understand '{message.Text}'.");
+                context.Wait(this.MessageReceived);
+                return;
+            }
+
+            await context.PostAsync("I see you want to buy bike wheels.");
+
+            await context.Forward(new AppAuthDialog(),
+                this.ResumeAfterHotelServicesDialog, message, CancellationToken.None);
+        }     
+
+        [LuisIntent("BikeParts.Chains")] //incomplete
+        public async Task BikeChains(IDialogContext context,
+                                 IAwaitable<IMessageActivity> activity,
+                                 LuisResult result)
+        {
+            Trace.TraceInformation("AppRootDialog::BikeTires");
+
+            var message = await activity;
+            IAwaitable<object> awaitableMessage = await activity as IAwaitable<object>;
+
+            if (!result.TryFindEntity(EntityBikeChain, out EntityRecommendation bikeRec)
+                || bikeRec.Score <= .5)
+            {
+                Trace.TraceWarning("Low Confidence in BikeAddtoCart.");
+
+                await context.PostAsync($"I'm sorry, I don't understand '{message.Text}'.");
+                context.Wait(this.MessageReceived);
+                return;
+            }
+
+            await context.PostAsync("I see you want to buy a bike chain.");
+
+            await context.Forward(new AppAuthDialog(),
+                this.ResumeAfterHotelServicesDialog, message, CancellationToken.None);
+        }
+
+
+        [LuisIntent("BikeParts.Tires")] //incomplete
+        public async Task BikeTires(IDialogContext context,
+                                 IAwaitable<IMessageActivity> activity,
+                                 LuisResult result)
+        {
+            Trace.TraceInformation("AppRootDialog::BikeTires");
+
+            var message = await activity;
+            IAwaitable<object> awaitableMessage = await activity as IAwaitable<object>;
+
+            if (!result.TryFindEntity(EntityBikeTires, out EntityRecommendation bikeRec)
+                || bikeRec.Score <= .5)
+            {
+                Trace.TraceWarning("Low Confidence in BikeAddtoCart.");
+
+                await context.PostAsync($"I'm sorry, I don't understand '{message.Text}'.");
+                context.Wait(this.MessageReceived);
+                return;
+            }
+
+            await context.PostAsync("I see you want to buy bike tires.");
+
+            await context.Forward(new AppAuthDialog(),
+                this.ResumeAfterHotelServicesDialog, message, CancellationToken.None);
+        }
 
         [LuisIntent("Bike.Menu")]
         public async Task BikeMenu(IDialogContext context,
