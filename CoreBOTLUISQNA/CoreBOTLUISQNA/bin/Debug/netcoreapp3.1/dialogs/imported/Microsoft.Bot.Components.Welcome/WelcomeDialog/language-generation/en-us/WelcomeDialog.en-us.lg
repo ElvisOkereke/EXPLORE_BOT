@@ -30,8 +30,22 @@
 
 # TextInput_Prompt_ds8ssE_text()
 - What is your full name?
-- Please enter your first and last names
+- Please enter your first and last name.
 # SendActivity_UP5N5Z()
 [Activity
-    Text = Nice to meet you ${user.name}!
+    Text = ${SendActivity_UP5N5Z_text()}
 ]
+
+# SendActivity_Qbgjm5()
+[Activity
+    Text = Checking for saved data...
+]
+
+# SendActivity_Gq5E62()
+[Activity
+    Text = Status: "true"
+]
+
+# SendActivity_UP5N5Z_text()
+- ```User_ID: 123
+Nice to meet you ${user.name}!```

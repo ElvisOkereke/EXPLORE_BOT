@@ -53,8 +53,22 @@
               "unrecognizedPrompt": "",
               "invalidPrompt": "",
               "prompt": "${TextInput_Prompt_ds8ssE()}",
-              "property": "user.name",
-              "outputFormat": "=user.name"
+              "outputFormat": "=user.name",
+              "property": "user.name"
+            },
+            {
+              "$kind": "Microsoft.SendActivity",
+              "$designer": {
+                "id": "Qbgjm5"
+              },
+              "activity": "${SendActivity_Qbgjm5()}"
+            },
+            {
+              "$kind": "Microsoft.SendActivity",
+              "$designer": {
+                "id": "Gq5E62"
+              },
+              "activity": "${SendActivity_Gq5E62()}"
             },
             {
               "$kind": "Microsoft.SendActivity",
@@ -70,6 +84,14 @@
               },
               "property": "user.greeted",
               "value": "true"
+            },
+            {
+              "$kind": "Microsoft.BeginDialog",
+              "$designer": {
+                "id": "JSjkwo"
+              },
+              "activityProcessed": false,
+              "dialog": "Recommend"
             }
           ]
         }

@@ -1,0 +1,124 @@
+{
+  "$kind": "Microsoft.AdaptiveDialog",
+  "$designer": {
+    "id": "prTAdN",
+    "name": "Recommend",
+    "description": ""
+  },
+  "autoEndDialog": true,
+  "defaultResultProperty": "dialog.result",
+  "triggers": [
+    {
+      "$kind": "Microsoft.OnBeginDialog",
+      "$designer": {
+        "name": "BeginDialog",
+        "description": "",
+        "id": "7kzhJ1"
+      },
+      "actions": [
+        {
+          "$kind": "Microsoft.TextInput",
+          "$designer": {
+            "id": "M8Xs2n"
+          },
+          "disabled": false,
+          "maxTurnCount": 3,
+          "alwaysPrompt": false,
+          "allowInterruptions": false,
+          "prompt": "${TextInput_Prompt_M8Xs2n()}",
+          "unrecognizedPrompt": "",
+          "invalidPrompt": "",
+          "defaultValueResponse": "",
+          "property": "user.inq",
+          "outputFormat": "user.inq"
+        },
+        {
+          "$kind": "Microsoft.SendActivity",
+          "$designer": {
+            "id": "iA9ubX"
+          },
+          "activity": "${SendActivity_iA9ubX()}"
+        },
+        {
+          "$kind": "Microsoft.TextInput",
+          "$designer": {
+            "id": "qPdTsV"
+          },
+          "disabled": false,
+          "maxTurnCount": 3,
+          "alwaysPrompt": false,
+          "allowInterruptions": false,
+          "prompt": "${TextInput_Prompt_qPdTsV()}",
+          "unrecognizedPrompt": "",
+          "invalidPrompt": "",
+          "defaultValueResponse": ""
+        },
+        {
+          "$kind": "Microsoft.SendActivity",
+          "$designer": {
+            "id": "MSVI7E"
+          },
+          "activity": "${SendActivity_MSVI7E()}"
+        },
+        {
+          "$kind": "Microsoft.TextInput",
+          "$designer": {
+            "id": "ViWxzV"
+          },
+          "disabled": false,
+          "maxTurnCount": 3,
+          "alwaysPrompt": false,
+          "allowInterruptions": false,
+          "prompt": "${TextInput_Prompt_ViWxzV()}",
+          "unrecognizedPrompt": "",
+          "invalidPrompt": "",
+          "defaultValueResponse": ""
+        },
+        {
+          "$kind": "Microsoft.SendActivity",
+          "$designer": {
+            "id": "RgR2iS"
+          },
+          "activity": "${SendActivity_RgR2iS()}"
+        },
+        {
+          "$kind": "Microsoft.TextInput",
+          "$designer": {
+            "id": "hswq4x"
+          },
+          "disabled": false,
+          "maxTurnCount": 3,
+          "alwaysPrompt": false,
+          "allowInterruptions": false,
+          "prompt": "${TextInput_Prompt_hswq4x()}",
+          "unrecognizedPrompt": "",
+          "invalidPrompt": "",
+          "defaultValueResponse": ""
+        },
+        {
+          "$kind": "Iciclecreek.Sql.Execute",
+          "$designer": {
+            "id": "pCOk7u"
+          },
+          "resultProperty": "dialog.sql",
+          "connectionString": "Server=tcp:explorebotdb.database.windows.net,1433;Initial Catalog=botdb;Persist Security Info=False;User ID=dotexe;Password=Password715!;MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30;",
+          "statements": [
+            "SELECT order_id",
+            "FROM customers",
+            "WHERE customer_id = '123'"
+          ]
+        },
+        {
+          "$kind": "Microsoft.SendActivity",
+          "$designer": {
+            "id": "QgfCfJ"
+          },
+          "activity": "${SendActivity_QgfCfJ()}"
+        }
+      ]
+    }
+  ],
+  "generator": "Recommend.lg",
+  "recognizer": "Recommend.lu.qna",
+  "id": "Recommend"
+}

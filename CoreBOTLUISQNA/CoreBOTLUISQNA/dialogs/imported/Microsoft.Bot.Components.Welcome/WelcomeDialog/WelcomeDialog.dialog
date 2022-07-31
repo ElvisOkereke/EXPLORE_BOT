@@ -59,6 +59,20 @@
             {
               "$kind": "Microsoft.SendActivity",
               "$designer": {
+                "id": "Qbgjm5"
+              },
+              "activity": "${SendActivity_Qbgjm5()}"
+            },
+            {
+              "$kind": "Microsoft.SendActivity",
+              "$designer": {
+                "id": "Gq5E62"
+              },
+              "activity": "${SendActivity_Gq5E62()}"
+            },
+            {
+              "$kind": "Microsoft.SendActivity",
+              "$designer": {
                 "id": "UP5N5Z"
               },
               "activity": "${SendActivity_UP5N5Z()}"
@@ -70,6 +84,14 @@
               },
               "property": "user.greeted",
               "value": "true"
+            },
+            {
+              "$kind": "Microsoft.BeginDialog",
+              "$designer": {
+                "id": "JSjkwo"
+              },
+              "activityProcessed": false,
+              "dialog": "Recommend"
             }
           ]
         }

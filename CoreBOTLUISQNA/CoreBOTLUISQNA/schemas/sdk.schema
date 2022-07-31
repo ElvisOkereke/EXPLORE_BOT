@@ -5,6 +5,9 @@
   "description": "These are all of the kinds that can be created by the loader.",
   "oneOf": [
     {
+      "$ref": "#/definitions/Iciclecreek.Sql.Execute"
+    },
+    {
       "$ref": "#/definitions/Microsoft.ActivityTemplate"
     },
     {
@@ -442,6 +445,79 @@
       "examples": [
         "user.age > 13"
       ]
+    },
+    "Iciclecreek.Sql.Execute": {
+      "$role": "implements(Microsoft.IDialog)",
+      "title": "Execute SQL action",
+      "description": "Execute SQL action against a SQL database using SqlClient.",
+      "type": "object",
+      "required": [
+        "connectionString",
+        "sql",
+        "$kind"
+      ],
+      "$package": {
+        "name": "Iciclecreek.Bot.Builder.Dialogs.Database.SqlClient",
+        "version": "4.16.0"
+      },
+      "additionalProperties": false,
+      "patternProperties": {
+        "^\\$": {
+          "title": "Tooling property",
+          "description": "Open ended property for tooling."
+        }
+      },
+      "properties": {
+        "id": {
+          "type": "string",
+          "title": "Id",
+          "description": "Optional id for the dialog"
+        },
+        "disabled": {
+          "$ref": "#/definitions/booleanExpression",
+          "title": "Disabled",
+          "description": "Optional condition which if true will disable this action.",
+          "examples": [
+            true,
+            "=user.age > 3"
+          ]
+        },
+        "connectionString": {
+          "$ref": "#/definitions/stringExpression",
+          "title": "Connection String",
+          "description": "Database connection string."
+        },
+        "statements": {
+          "type": "array",
+          "title": "Statements",
+          "description": "SQL statements to execute.",
+          "items": {
+            "$ref": "#/definitions/stringExpression",
+            "title": "Statement",
+            "description": "SQL statement to execute."
+          }
+        },
+        "resultProperty": {
+          "$ref": "#/definitions/stringExpression",
+          "title": "Property",
+          "description": "Property to store the result of database command.",
+          "examples": [
+            "dialog.userRecord"
+          ]
+        },
+        "$kind": {
+          "title": "Kind of dialog object",
+          "description": "Defines the valid properties for the component you are configuring (from a dialog .schema file)",
+          "type": "string",
+          "pattern": "^[a-zA-Z][a-zA-Z0-9.]*$",
+          "const": "Iciclecreek.Sql.Execute"
+        },
+        "$designer": {
+          "title": "Designer information",
+          "type": "object",
+          "description": "Extra information for the Bot Framework Composer."
+        }
+      }
     },
     "integerExpression": {
       "$role": "expression",
@@ -3932,6 +4008,9 @@
       "description": "Components which derive from Dialog",
       "$role": "interface",
       "oneOf": [
+        {
+          "$ref": "#/definitions/Iciclecreek.Sql.Execute"
+        },
         {
           "$ref": "#/definitions/Microsoft.AdaptiveDialog"
         },

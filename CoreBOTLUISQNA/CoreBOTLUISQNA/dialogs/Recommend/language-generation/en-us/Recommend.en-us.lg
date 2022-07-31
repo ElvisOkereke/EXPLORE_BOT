@@ -1,0 +1,62 @@
+[import](common.lg)
+
+# TextInput_Prompt_M8Xs2n()
+[Activity
+    Text = ${TextInput_Prompt_M8Xs2n_text()}
+]
+
+# TextInput_Prompt_M8Xs2n_text()
+- ```What can I help you with today?
+(I can also make recommendations!)```
+# SendActivity_iA9ubX()
+[Activity
+    Text = ${SendActivity_iA9ubX_text()}
+]
+
+# SendActivity_iA9ubX_text()
+- ```Here are the "fixed gear" bikes we have for sale:
+[Fuji Declaration \- $565
+Fuji Feather 2022 \- $1055
+Masi Uno Rider \- $800]```
+# SendActivity_MSVI7E()
+[Activity
+    Text = ${SendActivity_MSVI7E_text()}
+]
+
+# SendActivity_MSVI7E_text()
+- ```Here are the "MTB" bikes we have for sale:
+[OPtic C3Max \- $5000
+OPtic C2 \- $1055
+OPtic C1 \- $800]```
+# SendActivity_RgR2iS()
+[Activity
+    Text = ${SendActivity_RgR2iS_text()}
+]
+
+# SendActivity_RgR2iS_text()
+- ```ここに私たちが販売している「固定ギア」バイクがあります:
+[Fuji Declaration \- $565
+Fuji Feather 2022 \- $1055
+Masi Uno Rider \- $800]```
+# SendActivity_QgfCfJ()
+[Activity
+    Text = ${SendActivity_QgfCfJ_text()}
+]
+
+# SendActivity_QgfCfJ_text()
+- ```Pending Order for customer_id: '123'
+${dialog.sql}```
+# TextInput_Prompt_qPdTsV()
+[Activity
+    Text = Anything Else?
+]
+
+# TextInput_Prompt_ViWxzV()
+[Activity
+    Text = Anything Else?
+]
+
+# TextInput_Prompt_hswq4x()
+[Activity
+    Text = Any Other Request?
+]

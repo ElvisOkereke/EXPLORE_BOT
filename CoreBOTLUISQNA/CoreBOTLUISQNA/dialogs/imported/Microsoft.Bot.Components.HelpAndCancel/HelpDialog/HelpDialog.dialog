@@ -17,6 +17,22 @@
       },
       "actions": [
         {
+          "$kind": "Microsoft.TextInput",
+          "$designer": {
+            "id": "mKLxUN"
+          },
+          "disabled": false,
+          "maxTurnCount": 3,
+          "alwaysPrompt": false,
+          "allowInterruptions": false,
+          "unrecognizedPrompt": "",
+          "invalidPrompt": "",
+          "defaultValueResponse": "",
+          "prompt": "${TextInput_Prompt_mKLxUN()}",
+          "property": "user.phone",
+          "outputFormat": "=user.phone"
+        },
+        {
           "$kind": "Microsoft.SendActivity",
           "$designer": {
             "id": "5JQ9rf"

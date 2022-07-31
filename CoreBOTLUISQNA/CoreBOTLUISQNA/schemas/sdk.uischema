@@ -1,5 +1,22 @@
 {
   "$schema": "https://schemas.botframework.com/schemas/ui/v1.0/ui.schema",
+  "Iciclecreek.Sql.Execute": {
+    "flow": {
+      "body": "SQL - Query: ${first(action.statements)}",
+      "footer": {
+        "description": "= (Object)",
+        "property": "=action.resultProperty",
+        "widget": "PropertyDescription"
+      },
+      "widget": "ActionCard"
+    },
+    "menu": {
+      "label": "Execute",
+      "submenu": [
+        "Sql"
+      ]
+    }
+  },
   "Microsoft.AdaptiveDialog": {
     "form": {
       "description": "This configures a data driven dialog via a collection of events and actions.",

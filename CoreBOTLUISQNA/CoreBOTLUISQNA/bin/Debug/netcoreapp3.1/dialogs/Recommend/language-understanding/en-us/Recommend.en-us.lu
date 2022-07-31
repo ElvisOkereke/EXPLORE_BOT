@@ -1,0 +1,12 @@
+
+# TextInput_Response_M8Xs2n
+> add some expected user responses:
+> - Please remind me to {itemTitle=buy milk}
+> - remind me to {itemTitle}
+> - add {itemTitle} to my todo list
+>
+> entity definitions:
+> @ ml Bike
+
+
+@ ml Bike
